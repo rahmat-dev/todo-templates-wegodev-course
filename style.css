@@ -4,6 +4,7 @@
 
 :root {
   --main-red-color: #e06262;
+  --homemade-apple-font: "Homemade Apple", cursive;
 }
 
 html {
@@ -27,6 +28,10 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.main-red-color {
+  color: var(--main-red-color);
+}
+
 .container {
   width: 600px;
   height: 600px;
@@ -41,7 +46,8 @@ body {
   padding: 0 16px;
 }
 
-.header {
+/* SECTION HEADER */
+section.header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -49,7 +55,7 @@ body {
 
 .header-title {
   font-size: 3.6rem;
-  font-family: "Homemade Apple", cursive;
+  font-family: var(--homemade-apple-font);
   text-transform: lowercase;
 }
 
@@ -61,7 +67,23 @@ body {
   outline: none;
   cursor: pointer;
 }
+/* END SECTION HEADER */
 
-.main-red-color {
-  color: var(--main-red-color);
+/* SECTION FORM ADD TODO */
+.add-form {
+  display: flex;
+  align-items: flex-start;
 }
+
+.add-input {
+  flex: 1;
+  background-color: unset;
+  border: none;
+  border-bottom: 1px solid var(--main-red-color);
+  outline: none;
+  font: 1.6rem var(--homemade-apple-font);
+  text-transform: lowercase;
+  text-align: center;
+  margin-right: 8px;
+}
+/* END SECTION FORM ADD TODO */
