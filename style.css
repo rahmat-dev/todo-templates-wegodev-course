@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-red-color: #e06262;
+}
+
 html {
   font-size: 10px;
 }
@@ -34,4 +38,30 @@ body {
 .frame {
   border: 1px solid #484848;
   height: 100%;
+  padding: 0 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header-title {
+  font-size: 3.6rem;
+  font-family: "Homemade Apple", cursive;
+  text-transform: lowercase;
+}
+
+.btn {
+  font-size: 1.8rem;
+  font-family: "Bungee", cursive;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.main-red-color {
+  color: var(--main-red-color);
 }
