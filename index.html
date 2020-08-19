@@ -12,69 +12,88 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="frame">
-        <section class="header">
-          <button class="btn">Add</button>
-          <h1 class="header-title">Todo Lists</h1>
-          <button class="btn main-red-color">Clear</button>
-        </section>
+    <div id="root" class="container"></div>
 
-        <section class="form-add-todo">
-          <form class="add-form">
-            <input type="text" class="add-input" />
-            <button class="btn">Add</button>
-          </form>
-        </section>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      class App extends React.Component {
+        render() {
+          return (
+            <div className="frame">
+              <section className="header">
+                <button className="btn">Add</button>
+                <h1 className="header-title">Todo Lists</h1>
+                <button className="btn main-red-color">Clear</button>
+              </section>
 
-        <section class="todos">
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-          <div class="todo">
-            <span class="todo-text">Learning React</span>
-          </div>
-        </section>
-      </div>
-    </div>
+              <section className="form-add-todo">
+                <form className="add-form">
+                  <input type="text" className="add-input" />
+                  <button className="btn">Add</button>
+                </form>
+              </section>
+
+              <section className="todos">
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+                <div className="todo">
+                  <span className="todo-text">Learning React</span>
+                </div>
+              </section>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
   </body>
 </html>
