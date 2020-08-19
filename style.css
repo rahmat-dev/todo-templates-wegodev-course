@@ -4,6 +4,7 @@
 
 :root {
   --main-red-color: #e06262;
+  --main-black-color: #484848;
   --homemade-apple-font: "Homemade Apple", cursive;
 }
 
@@ -34,16 +35,32 @@ body {
 
 .container {
   width: 600px;
-  height: 600px;
+  height: 100%;
   background-color: #f2eecb;
   border-radius: 4px;
   padding: 32px;
 }
 
 .frame {
-  border: 1px solid #484848;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--main-black-color);
   height: 100%;
-  padding: 0 16px;
+  padding: 16px 16px 0px;
+}
+
+.btn {
+  font-size: 1.8rem;
+  font-family: "Bungee", cursive;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:active {
+  text-shadow: 1px 1px 2px;
 }
 
 /* SECTION HEADER */
@@ -54,18 +71,10 @@ section.header {
 }
 
 .header-title {
-  font-size: 3.6rem;
+  font-size: 3.2rem;
   font-family: var(--homemade-apple-font);
+  color: var(--main-black-color);
   text-transform: lowercase;
-}
-
-.btn {
-  font-size: 1.8rem;
-  font-family: "Bungee", cursive;
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
 }
 /* END SECTION HEADER */
 
@@ -87,3 +96,30 @@ section.header {
   margin-right: 8px;
 }
 /* END SECTION FORM ADD TODO */
+
+/* SECTION TODO */
+section.todos {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  margin: 16px 0;
+}
+
+section.todos::-webkit-scrollbar {
+  width: 0px;
+}
+
+.todo {
+  flex: 1;
+  border-bottom: 1px solid var(--main-red-color);
+  font: 2.4rem var(--homemade-apple-font);
+  text-transform: lowercase;
+  text-align: center;
+}
+/* END SECTION TODO */
+
+@media only screen and (max-width: 387px) {
+  .header-title {
+    font-size: 2.4rem;
+  }
+}
